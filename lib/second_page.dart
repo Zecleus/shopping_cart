@@ -52,6 +52,8 @@ class SecondPage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
+                        Provider.of<DataClass>(context, listen: false)
+                            .decrementX();
                         if (Provider.of<DataClass>(context, listen: false).x <=
                             0) {
                           Get.snackbar("Item", "Can not decrease more",
