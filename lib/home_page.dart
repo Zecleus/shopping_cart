@@ -50,6 +50,7 @@ class HomePage extends StatelessWidget {
                 ),
                 onTap: () {
                   if (context.read<DataClass>().x >= 5) {
+                    Provider.of<DataClass>(context, listen: false).incrementX();
                     Get.snackbar("Item", "Can not more than this",
                         backgroundColor: Colors.black,
                         colorText: Colors.white,
