@@ -5,7 +5,7 @@ class DataClass extends ChangeNotifier {
   int get x => _x;
   void incrementX() {
     _x++;
-    notifyListeners();
+    notifyListeners(); //update() setState()
   }
 
   void decrementX() {
